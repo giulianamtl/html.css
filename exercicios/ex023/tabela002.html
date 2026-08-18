@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         caption {
@@ -26,12 +27,27 @@
             padding: 10px;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #353232;
+        }
+
         thead, tfoot {
-            background-color: grey;
+            background-color: #353232;
             color: white;
         }
 
+        tbody > tr:nth-child(odd) { /* ímpar (2n-1) */  
+            background-color: white
+        }
+
+        tbody > tr:nth-child(even) { /* par (2n) */
+            background-color: lightgray;
+        }
+
         td.num {
+            width: 100px;
             text-align: right;
         }
 
